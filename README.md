@@ -22,6 +22,9 @@ Steps
 - validation 
 - stability analysis and sensitivity analysis
 
+![IMG_2138](https://user-images.githubusercontent.com/111628669/224566095-71b82529-d69b-4171-a842-898075937079.PNG)
+
+
 project presentation 
 - 02/05/2023 
 - Keep the code tidy
