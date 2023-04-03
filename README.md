@@ -1,16 +1,16 @@
-# ML_breast_cancer_prediction
+# Type_2_Diabetes_Prediction
 Machine Learning module project
 
 Dataset and analysis 
 - Dataset: UKbiobank
-- Idea: breast cancer prediction
+- Idea: Type 2 Diabetes prediction
 - Run at least two supervised and one unsupervised algorithm. (the unsupervised algorithm can be used to give a descriptive overview of the data. the supervised algorithms should be at least two to compare results.) 
 
 
 Possible aims to consider:
-- Build a classficiation model to predict breast cancer diagnosis (benign/maglignant).
-- Identifying the most important features for brest cancer prediction 
-- Develop a risk prediction model to estimate the likelihood of breast cancer occurrence in a patient. 
+- Build a classficiation model to predict type 2 diabetes.
+- Identifying the most important features for type 2 diabetes prediction 
+- Develop a risk prediction model to estimate the likelihood of type 2 diabetes in a patient. 
 
 Steps 
 - data extraction 
