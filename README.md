@@ -1,4 +1,4 @@
-# Diabetes_Prediction
+# Diabetes_Prediction_on_Males
 Machine Learning module project
 
 Dataset and analysis 
