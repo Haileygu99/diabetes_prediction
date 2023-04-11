@@ -162,5 +162,31 @@ data_final <- data_final[data_final$diabetes..0.0 >= 0 | is.na(data_final$diabet
 
 write.csv(data_final, "data_final.csv", row.names = TRUE)
 
+##### ------------------------------------------------------------
+##### spliting the data 
+# loading necessary packages 
+library(magrittr)
+library(dplyr)
+library(tidyverse)
+library(tableone)
+library(caret) #splitting data
+
+df<-read_csv('data_final.csv')
+
+# Check for non-numeric columns and convert to numeric
+non_numeric_cols <- sapply(df, function(x) !is.numeric(x))
+df[, non_numeric_cols] <- lapply(df[, non_numeric_cols], as.numeric)
 
 
+# splitting training and test data
+# ----- 75/25 splitting (caret package)
+# Create a random stratified split of the data, keeping NAs as a separate category
+set.seed(123) # for reproducibility
+split_index <- createDataPartition(ifelse(is.na(df$diabetes..0.0), "NA", "Non-NA"), p = 0.75, list = FALSE)
+
+# Split the data into training and test sets based on the split index
+train_data <- df[split_index, ]
+test_data <- df[-split_index, ]
+
+write.csv(train_data, "train_df.csv")
+write.csv(test_data, "test_df.csv")
