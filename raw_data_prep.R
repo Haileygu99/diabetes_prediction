@@ -163,6 +163,7 @@ data_final <- data_final[data_final$diabetes..0.0 >= 0 | is.na(data_final$diabet
 write.csv(data_final, "data_final.csv", row.names = TRUE)
 
 ##### ------------------------------------------------------------
+
 ##### spliting the data 
 # loading necessary packages 
 library(magrittr)
@@ -172,6 +173,16 @@ library(tableone)
 library(caret) #splitting data
 
 df<-read_csv('data_final.csv')
+
+sum(df$diabetes..0.0 == 0, na.rm = T)
+sum(df$diabetes..0.0 == 1, na.rm = T)
+
+# Check for missing values in the 'column_name' column
+sum(is.na(df$diabetes..0.0))
+
+# Subset the data frame to keep only the rows without missing values in the diabetes..0.0 column
+df <- df[complete.cases(df$diabetes..0.0), ]
+
 
 # Check for non-numeric columns and convert to numeric
 non_numeric_cols <- sapply(df, function(x) !is.numeric(x))
