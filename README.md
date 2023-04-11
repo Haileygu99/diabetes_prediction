@@ -8,9 +8,9 @@ Dataset and analysis
 
 
 Possible aims to consider:
-- Build a classficiation model to predict type 2 diabetes.
-- Identifying the most important features for type 2 diabetes prediction 
-- Develop a risk prediction model to estimate the likelihood of type 2 diabetes in a patient. 
+- Build a classficiation model to predict diabetes.
+- Identifying the most important features for diabetes prediction 
+- Develop a risk prediction model to estimate the likelihood of diabetes in a patient. 
 
 Steps 
 - data extraction 
